@@ -19,8 +19,8 @@ jobs:
       uses: Azure/docker-login@v1
       with:
         username: sbacr02
-        password: lZWpE79iPIJA8WHjvYoW7QqC0aMqMC/r
-        login-server: sbarc02.azurecr.io
+        password: ${{secrets.ACRPWD}}
+        login-server: sbacr02.azurecr.io
 
     - name: Push Image
       run: docker push sbacr02.azurecr.io/jpwxapp01:latest
