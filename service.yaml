@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jpwxapp01
+spec:
+  selector:
+    app: jpwxapp01
+  ports:
+  - port: 80
+    targetPort: 5276

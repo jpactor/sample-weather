@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jpwxapp01
+spec:
+  selector:
+    matchLabels:
+      app: jpwxapp01
+  template:
+    metadata:
+      labels:
+        app: jpwxapp01
+    spec:
+      containers:
+      - name: jpwxapp01
+        image: sbacr02.azurecr.io/jpwxapp01:latest
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 5276
