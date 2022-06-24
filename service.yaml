@@ -6,6 +6,6 @@ spec:
   selector:
     app: jpwxapp01
   ports:
-  - port: 80
+  - port: 5276
     targetPort: 5276
   type: LoadBalancer
